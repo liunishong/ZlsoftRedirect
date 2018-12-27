@@ -84,7 +84,7 @@ public class Service implements ServiceInterface {
 		// 格式化输出，即按标签自动换行，否则就是一行输出
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 		// 设置编码（默认编码就是utf-8）
-		marshaller.setProperty(Marshaller.JAXB_ENCODING, "GBK");
+		marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
 		// 是否省略xml头信息，默认不省略（false）
 		marshaller.setProperty(Marshaller.JAXB_FRAGMENT, Boolean.FALSE);
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
