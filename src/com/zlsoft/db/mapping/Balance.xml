@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zlsoft.db.mapping.Balance">
+    <select id="getBalanceByTime" parameterType="com.zlsoft.barcode.webservice.classespojos.YYGH3012INBody" 
+        resultType="com.zlsoft.barcode.webservice.classespojos.YYGH3012OUTDetail">
+        Select * From Table(get_zhicall_yygh3012(#{BeginTradeDate},#{EndTradeDate}))
+    </select>
+    <select id="getBalanceByNo" parameterType="com.zlsoft.barcode.webservice.classespojos.YYGH3012INBody" 
+        resultType="com.zlsoft.barcode.webservice.classespojos.YYGH3012OUTDetail">
+        Select * From Table(get_zhicall_yygh3012(#{BeginTradeDate},#{EndTradeDate},#{PayNO}))
+    </select>
+</mapper>
